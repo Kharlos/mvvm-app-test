@@ -68,7 +68,7 @@ class MoviesListFragment : Fragment() {
 
         movieAdapter = MovieListAdapter(object : MovieListAdapterInterface{
             override fun OnMovieSelected(movie: MovieModel) {
-
+                findNavController().navigate(MoviesListFragmentDirections.actionFirstFragmentToMovieDetailFragment(movie))
             }
         })
 

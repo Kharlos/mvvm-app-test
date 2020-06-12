@@ -21,6 +21,7 @@ data class MovieModel(
     val vote_count: Int
 ) : Parcelable {
 
+    fun voteAverage() = vote_average.toFloat()
 
     fun movieTitle():String{
         return "${title}"

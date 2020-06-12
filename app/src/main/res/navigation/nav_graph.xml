@@ -10,5 +10,17 @@
         android:name="ve.com.cblanco1989.features.home.ui.fragment.MoviesListFragment"
         android:label="Películas Popular"
         tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_FirstFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        tools:layout="@layout/movie_detail_fragment"
+        android:name="ve.com.cblanco1989.features.moviedetail.ui.MovieDetailFragment"
+        android:label="MovieDetailFragment" >
+        <argument
+            android:name="arg_movie"
+            app:argType="ve.com.cblanco1989.features.home.data.MovieModel" />
     </fragment>
 </navigation>
