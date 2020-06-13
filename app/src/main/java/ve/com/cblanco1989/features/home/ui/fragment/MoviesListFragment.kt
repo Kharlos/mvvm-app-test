@@ -114,6 +114,7 @@ class MoviesListFragment : Fragment() {
     }
 
     private fun showAnError() {
+        binding.loader.visibility = View.GONE
         binding.tvError.text = getString(R.string.empty_state)
         binding.tvError.visibility = View.VISIBLE
         binding.rvMovies.visibility = View.GONE
