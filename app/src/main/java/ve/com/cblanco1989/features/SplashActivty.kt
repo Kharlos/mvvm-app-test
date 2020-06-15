@@ -19,7 +19,7 @@ class SplashActivty : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_activty)
 
-        HiAnalyticsTools.enableLog();
+        HiAnalyticsTools.enableLog()
         val instance: HiAnalyticsInstance = HiAnalytics.getInstance(this)
         instance.setUserProfile("userKey","miKeyCarlos")
 

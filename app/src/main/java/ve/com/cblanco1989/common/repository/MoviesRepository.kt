@@ -21,7 +21,7 @@ class MoviesRepository {
             .getMoviesPopular()
             .enqueue(object : Callback<MoviePopularResponse>{
                 override fun onFailure(call: Call<MoviePopularResponse>, t: Throwable) {
-                    Log.d("EmitLog", "onFailure ${t.toString()}")
+                    Log.d("EmitLog", "onFailure $t")
                     moviesPopularResponse.value = null
                 }
 

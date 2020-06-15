@@ -39,7 +39,7 @@ class MovieListViewHolder( var binding:LayoutMovieListItemBinding) :RecyclerView
 
 }
 
-class MovieListDiffCalback() : DiffUtil.ItemCallback<MovieModel>(){
+class MovieListDiffCalback : DiffUtil.ItemCallback<MovieModel>(){
     override fun areItemsTheSame(oldItem: MovieModel, newItem: MovieModel): Boolean {
         return oldItem.id == newItem.id
     }

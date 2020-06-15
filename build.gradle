@@ -27,11 +27,12 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {url 'https://developer.huawei.com/repo/'}
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradleVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        classpath 'com.huawei.agconnect:agcp:1.2.1.301'
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
     }
@@ -41,6 +42,7 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {url 'https://developer.huawei.com/repo/'}
     }
 }
 
