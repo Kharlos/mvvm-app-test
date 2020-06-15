@@ -1,11 +1,7 @@
 <resources>
-    <string name="app_name">Mvvm App</string>
+    <string name="app_name">Movies</string>
     <string name="title_activity_home">Movies</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="title_activity_splash_activty">Movies</string>
 
     <string name="buscar_peliculas">Buscar peliculas</string>
     <string name="empty_state">No se han encontrado resultados.</string>
