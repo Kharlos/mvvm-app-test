@@ -15,7 +15,7 @@ class MoviesRepository {
 
     private val networkClient = NetworkClient<MovieApiService>()
 
-    fun getPopularMovies(moviesPopularResponse: MutableLiveData<MoviePopularResponse>){
+    suspend fun getPopularMovies(moviesPopularResponse: MutableLiveData<MoviePopularResponse>){
 
         networkClient.getRetrofitService(MovieApiService::class.java)
             .getMoviesPopular()
