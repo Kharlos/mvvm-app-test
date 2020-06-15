@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
         tools:context=".features.moviedetail.ui.MovieDetailFragment">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -25,7 +24,7 @@
 
         <TextView
             android:id="@+id/original_title"
-            android:layout_marginTop="12dp"
+            android:layout_margin="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{movie.movieTitle()}"
@@ -37,24 +36,33 @@
             style="?android:attr/ratingBarStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
+            android:layout_margin="12dp"
             android:numStars="10"
             android:rating="@{movie.voteAverage()}"
             android:stepSize="0.5" />
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lenguaje original"
+            android:layout_margin="12dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
             android:id="@+id/homepage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:layout_marginBottom="3dp"
+            android:layout_margin="12dp"
             android:autoLink="all"
+            android:text="@{movie.formatLang()}"
             android:textColor="@android:color/black" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Descripción"
+            android:layout_margin="12dp"
             android:textColor="@android:color/black"
             android:textStyle="bold" />
 
@@ -63,6 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@{movie.overview}"
+            android:layout_margin="12dp"
             android:textColor="@android:color/black" />
 
 

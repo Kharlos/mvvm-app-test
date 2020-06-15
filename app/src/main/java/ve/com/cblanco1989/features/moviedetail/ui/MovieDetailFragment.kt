@@ -37,7 +37,7 @@ class MovieDetailFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MovieDetailViewModel::class.java)
-
+        requireActivity().title = args.argMovie.original_title
 
 
     }
