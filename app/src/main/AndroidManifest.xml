@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ve.com.cblanco1989">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        android:protectionLevel="signature" />
 
     <application
         android:allowBackup="true"
@@ -11,11 +20,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".features.datameasure.ui.datadetail.DataDetailActivity"
+            android:label="@string/title_activity_data_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".features.datameasure.ui.list.AppListActivity"
+            android:label="@string/title_activity_app_list"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".features.SplashActivty"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/title_activity_splash_activty">
+            android:label="@string/title_activity_splash_activty"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +41,7 @@
         <activity
             android:name=".features.home.ui.activity.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

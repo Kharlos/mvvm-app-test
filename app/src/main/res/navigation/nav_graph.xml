@@ -16,11 +16,51 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailFragment"
-        tools:layout="@layout/movie_detail_fragment"
         android:name="ve.com.cblanco1989.features.moviedetail.ui.MovieDetailFragment"
-        android:label="MovieDetailFragment" >
+        android:label="MovieDetailFragment"
+        tools:layout="@layout/movie_detail_fragment">
         <argument
             android:name="arg_movie"
             app:argType="ve.com.cblanco1989.features.home.data.MovieModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/First2Fragment"
+        android:name="ve.com.cblanco1989.features.datameasure.ui.First2Fragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first2">
+
+        <action
+            android:id="@+id/action_First2Fragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="ve.com.cblanco1989.features.datameasure.ui.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_First2Fragment"
+            app:destination="@id/First2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/First3Fragment"
+        android:name="ve.com.cblanco1989.features.datameasure.ui.datadetail.First3Fragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first3">
+
+        <action
+            android:id="@+id/action_First3Fragment_to_Second2Fragment"
+            app:destination="@id/Second2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Second2Fragment"
+        android:name="ve.com.cblanco1989.features.datameasure.ui.datadetail.Second2Fragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second2">
+
+        <action
+            android:id="@+id/action_Second2Fragment_to_First3Fragment"
+            app:destination="@id/First3Fragment" />
     </fragment>
 </navigation>
