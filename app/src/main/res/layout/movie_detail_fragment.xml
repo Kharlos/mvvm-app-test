@@ -73,7 +73,5 @@
             android:text="@{movie.overview}"
             android:layout_margin="12dp"
             android:textColor="@android:color/black" />
-
-
     </LinearLayout>
 </layout>

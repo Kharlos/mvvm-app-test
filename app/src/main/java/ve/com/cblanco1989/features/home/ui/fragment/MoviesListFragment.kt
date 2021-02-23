@@ -80,7 +80,7 @@ class MoviesListFragment : Fragment() {
         })
 
         movieListViewModel.filters.observe(viewLifecycleOwner, Observer {
-            if (it != null) showMovieList(it) else showAnError()
+            if (it != null) showMovieList(it) else emptyState()
         })
 
         movieListViewModel.getPopularMovie()
@@ -115,13 +115,14 @@ class MoviesListFragment : Fragment() {
 
     private fun showAnError() {
         binding.loader.visibility = View.GONE
+        binding.tvError.text = getString(R.string.generic_error)
         binding.tvError.text = getString(R.string.empty_state)
         binding.tvError.visibility = View.VISIBLE
         binding.rvMovies.visibility = View.GONE
     }
 
     private fun emptyState() {
-        binding.tvError.text = getString(R.string.generic_error)
+        binding.tvError.text = getString(R.string.empty_state)
         binding.tvError.visibility = View.VISIBLE
         binding.rvMovies.visibility = View.GONE
 

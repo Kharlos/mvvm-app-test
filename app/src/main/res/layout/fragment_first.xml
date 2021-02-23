@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
             android:hint="@string/buscar_peliculas"
+            android:imeOptions="actionDone"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView

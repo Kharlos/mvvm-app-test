@@ -7,7 +7,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: "androidx.navigation.safeargs.kotlin"
 
 apply plugin: 'kotlin-kapt'
-
+apply plugin: 'com.google.firebase.appdistribution'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 29
@@ -31,6 +32,13 @@ android {
     }
 
     buildTypes {
+        debug{
+            debuggable = true
+            firebaseAppDistribution{
+                releaseNotesFile="./releasenotes.txt"
+                testersFile="./testers.txt"
+            }
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -57,10 +65,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "com.google.android.material:material:$materialVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
-    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'androidx.wear:wear:1.0.0'
     testImplementation "junit:junit:4.12"
     androidTestImplementation "androidx.test.ext:junit:1.1.1"
@@ -68,6 +73,9 @@ dependencies {
 
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coruotines_version"
     implementation "com.google.code.gson:gson:$gsonVersion"
@@ -83,6 +91,14 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:$okhttp3_version"
 
     implementation 'com.huawei.hms:hianalytics:5.0.0.301'
+// Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
 
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Add the dependencies for any other desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
 }
 apply plugin: 'com.huawei.agconnect'

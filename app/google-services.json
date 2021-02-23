@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "207883475034",
+    "firebase_url": "https://cblanco-3748c.firebaseio.com",
+    "project_id": "cblanco-3748c",
+    "storage_bucket": "cblanco-3748c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207883475034:android:d6b555f234ec76d686a063",
+        "android_client_info": {
+          "package_name": "ve.com.cblanco1989"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207883475034-vhtlfpouulre1o4jfqkt8u7e646egu1c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7EWmUlT3gtYgsWH4dgRIjk4Wr4fxRmDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207883475034-vhtlfpouulre1o4jfqkt8u7e646egu1c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
