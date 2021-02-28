@@ -22,6 +22,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ve.com.cblanco1989.R
+import ve.com.cblanco1989.features.accelerometertest.AcceActivity
 import ve.com.cblanco1989.features.datameasure.ui.list.AppListActivity
 import ve.com.cblanco1989.features.home.ui.activity.HomeActivity
 
@@ -49,10 +50,11 @@ class SplashActivty : AppCompatActivity() {
         bundle.putString("exam_time", "20190520-08")
         instance.onEvent("begin_examination", bundle)
 
-        if(hasPermissionToReadNetworkHistory()){
+        /*if(hasPermissionToReadNetworkHistory()){
             requestPermission()
         }
-
+         */
+        goAccelerometerTest()
     }
 
     private fun hasPermissionToReadNetworkHistory(): Boolean {
@@ -99,6 +101,12 @@ class SplashActivty : AppCompatActivity() {
     private fun requestReadNetworkHistoryAccess() {
         val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
         startActivity(intent)
+    }
+
+    private fun goAccelerometerTest() {
+        var mIntent = Intent(this, AcceActivity::class.java)
+        mIntent.addFlags(FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(mIntent)
     }
 
     private fun goToHome() {
